@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meat Love Korean BBQ | All-You-Can-Eat KBBQ in Koreatown, Los Angeles</title>
+<meta name="description" content="Koreatown's best-value All-You-Can-Eat Korean BBQ since 2017. Prime brisket, bulgogi, unlimited banchan & more from $26.99. Call (323) 373-0700 to reserve.">
+<meta name="keywords" content="Korean BBQ Los Angeles, KBBQ Koreatown, All You Can Eat Korean BBQ LA, best Korean BBQ LA, Meat Love BBQ, AYCE KBBQ">
+<meta property="og:title" content="Meat Love Korean BBQ | AYCE KBBQ in Koreatown, LA">
+<meta property="og:description" content="Prime Korean BBQ, All-You-Can-Eat from $26.99. Koreatown's best value since 2017.">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Meat Love Korean BBQ",
+  "alternateName": "고기사랑",
+  "image": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1145 S Western Ave",
+    "addressLocality": "Los Angeles",
+    "addressRegion": "CA",
+    "postalCode": "90006",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-323-373-0700",
+  "email": "meatlovebbq@gmail.com",
+  "url": "",
+  "servesCuisine": "Korean BBQ",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"23:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"17:00","closes":"00:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"12:00","closes":"00:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"12:00","closes":"23:30"}
+  ],
+  "acceptsReservations": "True",
+  "hasMenu": "",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "800"
+  }
+}
+</script>
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --black: #1A1A1A;
+  --red: #E63926;
+  --red-hover: #c92d1e;
+  --gold: #D4A853;
+  --cream: #FAF5EF;
+  --text-light: #F5F0EB;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
+  background: var(--cream);
+  color: var(--black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section-pad { padding: 80px 0; }
+.section-dark { background: var(--black); color: var(--text-light); }
+.section-cream { background: var(--cream); color: var(--black); }
+.heading-display { font-family: 'Playfair Display', serif; font-weight: 900; }
+.gold { color: var(--gold); }
+.red { color: var(--red); }
+
+/* Page visibility */
+.page { display: none; }
+.page.active { display: block; }
+
+/* Buttons */
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--red); color: #fff;
+  padding: 14px 28px; border-radius: 6px;
+  font-weight: 600; font-size: 15px; letter-spacing: 0.5px;
+  border: none; cursor: pointer; transition: all 0.25s;
+  font-family: inherit;
+}
+.cta-btn:hover { background: var(--red-hover); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(230,57,38,0.3); }
+.cta-btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--text-light);
+  padding: 14px 28px; border-radius: 6px;
+  font-weight: 600; font-size: 15px; letter-spacing: 0.5px;
+  border: 2px solid rgba(250,245,239,0.5);
+  cursor: pointer; transition: all 0.25s; font-family: inherit;
+}
+.cta-btn-outline:hover { border-color: var(--text-light); background: rgba(250,245,239,0.1); }
+.cta-btn-dark { background: var(--black); }
+.cta-btn-dark:hover { background: #333; }
+
+/* Navigation */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(26,26,26,0.88); backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent; transition: all 0.35s;
+  padding: 14px 0;
+}
+.navbar.scrolled { padding: 10px 0; border-bottom: 1px solid rgba(250,245,239,0.08); background: rgba(26,26,26,0.97); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.nav-logo-text { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 18px; color: var(--text-light); line-height: 1.1; }
+.nav-logo-sub { font-size: 9px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; font-weight: 500; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-link {
+  cursor: pointer; position: relative; padding: 4px 0;
+  font-weight: 500; font-size: 14px; letter-spacing: 0.8px;
+  text-transform: uppercase; color: var(--text-light);
+  transition: color 0.2s; background: none; border: none; font-family: inherit;
+}
+.nav-link:hover, .nav-link.active { color: var(--red); }
+.nav-link.active::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 2px; background: var(--red); border-radius: 1px;
+}
+.lang-toggle { display: flex; border: 1px solid rgba(250,245,239,0.3); border-radius: 4px; overflow: hidden; }
+.lang-btn {
+  background: transparent; border: none; color: var(--text-light);
+  padding: 5px 12px; cursor: pointer; font-family: inherit; font-size: 13px; transition: all 0.2s;
+}
+.lang-btn.active { background: var(--red); color: #fff; }
+.nav-reserve { padding: 10px 20px; font-size: 13px; }
+.mobile-controls { display: none; align-items: center; gap: 12px; }
+.mobile-phone { color: var(--red); display: flex; }
+.hamburger { background: none; border: none; color: var(--text-light); cursor: pointer; display: flex; }
+
+/* Mobile menu overlay */
+.mobile-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.9);
+  z-index: 999; display: none; flex-direction: column;
+  align-items: center; justify-content: center; gap: 32px;
+  backdrop-filter: blur(10px);
+}
+.mobile-overlay.open { display: flex; }
+.mobile-overlay .nav-link { font-size: 24px; color: var(--text-light); }
+.mobile-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--text-light); cursor: pointer; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .mobile-controls { display: flex; }
+  .section-pad { padding: 56px 0; }
+}
+
+/* Hero */
+.hero {
+  position: relative; overflow: hidden;
+  padding: 140px 0 100px;
+  background: linear-gradient(135deg, #1A1A1A 0%, #2a1510 50%, #1A1A1A 100%);
+  text-align: center;
+}
+.hero-glow1 { position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(230,57,38,0.12) 0%, transparent 70%); pointer-events: none; }
+.hero-glow2 { position: absolute; bottom: -100px; left: -60px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(212,168,83,0.08) 0%, transparent 70%); pointer-events: none; }
+.hero-est { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 24px; }
+.hero h1 { font-size: clamp(40px, 8vw, 72px); line-height: 1.05; text-shadow: 0 0 40px rgba(230,57,38,0.3); }
+.hero-sub { font-size: 18px; opacity: 0.7; margin: 24px 0 40px; font-weight: 300; letter-spacing: 0.5px; }
+.hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* Page banner (smaller hero for inner pages) */
+.page-banner {
+  padding: 120px 0 60px; text-align: center;
+  background: linear-gradient(135deg, #1A1A1A 0%, #2a1510 50%, #1A1A1A 100%);
+}
+.page-banner-label { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; font-weight: 600; }
+.page-banner h1 { font-size: clamp(36px, 7vw, 56px); }
+.page-banner p { font-size: 16px; opacity: 0.6; max-width: 500px; margin: 12px auto 0; }
+
+/* Feature cards */
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.feature-card {
+  background: rgba(26,26,26,0.03); border-radius: 12px; padding: 36px;
+  border: 1px solid rgba(26,26,26,0.06); transition: transform 0.3s; text-align: center;
+}
+.feature-card:hover { transform: translateY(-4px); }
+.feature-card .emoji { font-size: 40px; margin-bottom: 16px; }
+.feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+.feature-card p { font-size: 14px; opacity: 0.7; line-height: 1.7; }
+
+/* Dish cards */
+.dish-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.dish-card {
+  background: var(--black); border-radius: 12px; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s; color: var(--text-light);
+}
+.dish-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+.dish-card-img { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 56px; }
+.dish-card-body { padding: 20px 24px; }
+.dish-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 2px; }
+.dish-card .sub { font-size: 13px; color: var(--gold); margin-bottom: 8px; }
+.dish-card p { font-size: 13px; opacity: 0.6; }
+.fan-fav-badge {
+  position: absolute; top: 12px; right: 12px; background: var(--red);
+  color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; z-index: 2;
+}
+
+/* Review cards */
+.review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.review-card {
+  background: var(--black); color: var(--text-light); border-radius: 12px;
+  padding: 28px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.review-stars { color: var(--gold); display: flex; gap: 2px; margin-bottom: 16px; }
+.review-card blockquote { font-size: 15px; line-height: 1.7; font-style: italic; opacity: 0.85; }
+.review-attr { margin-top: 16px; font-size: 12px; opacity: 0.4; }
+
+/* Menu page */
+.tier-toggle { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+.tier-btn {
+  padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 15px;
+  cursor: pointer; font-family: inherit; transition: all 0.3s; background: transparent;
+  border: 2px solid rgba(26,26,26,0.12); color: var(--black);
+}
+.tier-btn.active-premium { border-color: var(--gold); background: var(--black); color: var(--gold); }
+.tier-btn.active-classic { border-color: var(--red); background: var(--black); color: var(--red); }
+.tier-card {
+  background: var(--black); border-radius: 12px; padding: 32px; color: var(--text-light); margin-bottom: 40px;
+}
+.tier-card.premium-border { border: 2px solid var(--gold); }
+.tier-card.classic-border { border: 2px solid var(--red); }
+.tier-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 8px; }
+.tier-header h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 28px; }
+.tier-price { margin-left: 12px; }
+.tier-per { font-size: 14px; opacity: 0.5; font-weight: 400; }
+.best-value-badge { background: var(--gold); color: var(--black); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; }
+.menu-items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.menu-item { padding: 8px 0; border-bottom: 1px solid rgba(250,245,239,0.08); display: flex; justify-content: space-between; font-size: 14px; }
+.menu-item:last-child { border-bottom: none; }
+.menu-item .alt { opacity: 0.4; font-size: 13px; }
+.included-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.included-group { background: rgba(26,26,26,0.04); border-radius: 10px; padding: 24px; }
+.included-group h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--red); margin-bottom: 12px; }
+.included-item { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; border-bottom: 1px solid rgba(26,26,26,0.06); }
+.included-item:last-child { border-bottom: none; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.info-box { background: rgba(26,26,26,0.04); border-radius: 10px; padding: 24px; }
+.info-box h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); margin-bottom: 8px; }
+.info-box p { font-size: 14px; opacity: 0.7; line-height: 1.7; }
+.note-box {
+  background: rgba(230,57,38,0.06); border-left: 3px solid var(--red);
+  border-radius: 0 8px 8px 0; padding: 20px 24px; margin-bottom: 40px;
+}
+.note-box h3 { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+.notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 6px; }
+.note-item { display: flex; align-items: center; gap: 8px; font-size: 14px; opacity: 0.8; }
+.note-item .check { color: var(--red); font-weight: 700; }
+
+/* About page */
+.about-text { max-width: 800px; margin: 0 auto; }
+.about-text p { font-size: 17px; line-height: 1.9; margin-bottom: 24px; opacity: 0.85; }
+.divider { display: flex; align-items: center; gap: 16px; margin: 0 auto 48px; max-width: 800px; }
+.divider-line { flex: 1; height: 1px; background: rgba(26,26,26,0.1); }
+.parking-card { background: var(--black); border-radius: 12px; padding: 36px; color: var(--text-light); }
+.parking-card h3 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 22px; margin-bottom: 20px; }
+.parking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.parking-item { display: flex; align-items: center; gap: 10px; font-size: 14px; opacity: 0.8; }
+.parking-item .check { color: var(--gold); font-weight: 700; }
+
+/* Contact page */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+.contact-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+.contact-icon { color: var(--red); margin-top: 2px; flex-shrink: 0; }
+.contact-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; opacity: 0.5; margin-bottom: 4px; }
+.hours-card { background: var(--black); border-radius: 12px; padding: 28px; color: var(--text-light); }
+.hours-row { display: flex; justify-content: space-between; align-items: center; padding: 13px 0; border-bottom: 1px solid rgba(250,245,239,0.08); }
+.hours-row:last-child { border-bottom: none; }
+.hours-day { font-weight: 500; }
+.hours-time { opacity: 0.8; text-align: right; }
+.hours-note { font-size: 11px; color: var(--gold); margin-top: 2px; }
+.weekend-banner { margin-top: 16px; background: rgba(212,168,83,0.1); border-radius: 8px; padding: 12px 16px; text-align: center; font-size: 14px; color: var(--gold); font-weight: 600; }
+.social-btns { display: flex; gap: 12px; }
+.social-btn { background: var(--black); color: var(--text-light); padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: background 0.2s; }
+.social-btn:hover { background: #333; }
+.map-frame { margin-top: 48px; border-radius: 12px; overflow: hidden; border: 2px solid rgba(26,26,26,0.08); }
+.map-frame iframe { display: block; width: 100%; height: 350px; border: 0; }
+.contact-park { background: rgba(26,26,26,0.04); border-radius: 10px; padding: 20px; margin-bottom: 24px; }
+.contact-park-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
+
+/* CTA Band */
+.cta-band { padding: 56px 0; text-align: center; }
+.cta-band h2 { margin-bottom: 20px; }
+
+/* Footer */
+.footer { padding: 48px 0 32px; border-top: 1px solid rgba(250,245,239,0.08); }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-bottom: 32px; }
+.footer-col-title { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px; font-weight: 600; }
+.footer-col p, .footer-col a { font-size: 13px; opacity: 0.7; line-height: 1.9; display: block; }
+.footer-bottom { border-top: 1px solid rgba(250,245,239,0.08); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-copy { font-size: 12px; opacity: 0.4; }
+.footer-socials { display: flex; gap: 16px; font-size: 13px; opacity: 0.5; }
+.footer-socials a:hover { opacity: 1; }
+
+/* Animations */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.anim { opacity: 0; transform: translateY(30px); transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1); }
+.anim.visible { opacity: 1; transform: translateY(0); }
+.hero-anim { animation: fadeInUp 0.9s cubic-bezier(.22,1,.36,1) forwards; }
+.hero-delay1 { animation: fadeInUp 0.9s cubic-bezier(.22,1,.36,1) 0.15s forwards; opacity: 0; }
+.hero-delay2 { animation: fadeInUp 0.9s cubic-bezier(.22,1,.36,1) 0.3s forwards; opacity: 0; }
+.hero-delay3 { animation: fadeInUp 0.9s cubic-bezier(.22,1,.36,1) 0.45s forwards; opacity: 0; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(230,57,38,0.4); } 50% { box-shadow: 0 0 0 10px rgba(230,57,38,0); } }
+.pulse { animation: pulse 2.5s infinite; }
+
+/* Stagger children */
+.stagger > *:nth-child(1) { transition-delay: 0s; }
+.stagger > *:nth-child(2) { transition-delay: 0.1s; }
+.stagger > *:nth-child(3) { transition-delay: 0.2s; }
+.stagger > *:nth-child(4) { transition-delay: 0.25s; }
+.stagger > *:nth-child(5) { transition-delay: 0.3s; }
+.stagger > *:nth-child(6) { transition-delay: 0.35s; }
+</style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <div class="nav-logo" onclick="navigate('home')">
+      <span style="font-size:22px;line-height:1">🔥</span>
+      <div>
+        <div class="nav-logo-text">MEAT LOVE</div>
+        <div class="nav-logo-sub">Korean BBQ · 고기사랑</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <button class="nav-link active" data-page="home" onclick="navigate('home')"><span data-en="Home" data-kr="홈">Home</span></button>
+      <button class="nav-link" data-page="menu" onclick="navigate('menu')"><span data-en="Menu" data-kr="메뉴">Menu</span></button>
+      <button class="nav-link" data-page="about" onclick="navigate('about')"><span data-en="About" data-kr="소개">About</span></button>
+      <button class="nav-link" data-page="contact" onclick="navigate('contact')"><span data-en="Contact" data-kr="연락처">Contact</span></button>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('kr')">한국어</button>
+      </div>
+      <a href="tel:3233730700" class="cta-btn nav-reserve">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-en="Reserve" data-kr="예약">Reserve</span>
+      </a>
+    </div>
+    <div class="mobile-controls">
+      <a href="tel:3233730700" class="mobile-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <button class="hamburger" onclick="openMobile()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Overlay -->
+<div class="mobile-overlay" id="mobileOverlay">
+  <button class="mobile-close" onclick="closeMobile()">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="nav-link" onclick="navigate('home')"><span data-en="Home" data-kr="홈">Home</span></button>
+  <button class="nav-link" onclick="navigate('menu')"><span data-en="Menu" data-kr="메뉴">Menu</span></button>
+  <button class="nav-link" onclick="navigate('about')"><span data-en="About" data-kr="소개">About</span></button>
+  <button class="nav-link" onclick="navigate('contact')"><span data-en="Contact" data-kr="연락처">Contact</span></button>
+  <div class="lang-toggle" style="margin-top:8px">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('kr')">한국어</button>
+  </div>
+  <a href="tel:3233730700" class="cta-btn pulse" style="margin-top:8px">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-en="Call to Reserve" data-kr="예약 전화하기">Call to Reserve</span>
+  </a>
+</div>
+
+
+<!-- ========================================================================== -->
+<!-- HOME PAGE -->
+<!-- ========================================================================== -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero section-dark">
+    <div class="hero-glow1"></div>
+    <div class="hero-glow2"></div>
+    <div class="container" style="position:relative">
+      <div class="hero-est hero-anim">★ Est. 2017 · Koreatown, Los Angeles ★</div>
+      <h1 class="heading-display hero-delay1" data-en="All-You-Can-Eat" data-kr="무한리필">All-You-Can-Eat</h1>
+      <h1 class="heading-display red hero-delay1" data-en="Prime Korean BBQ" data-kr="프라임 코리안 BBQ" style="margin-bottom:0">Prime Korean BBQ</h1>
+      <p class="hero-sub hero-delay2" data-en="Koreatown's Best Value Since 2017" data-kr="2017년부터 코리아타운 최고의 가성비">Koreatown's Best Value Since 2017</p>
+      <div class="hero-btns hero-delay3">
+        <a href="tel:3233730700" class="cta-btn pulse" style="font-size:16px;padding:16px 32px">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-en="Call to Reserve" data-kr="예약 전화하기">Call to Reserve</span>
+        </a>
+        <button class="cta-btn-outline" onclick="navigate('menu')" style="font-size:16px;padding:16px 32px">
+          <span data-en="View Menu" data-kr="메뉴 보기">View Menu</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Meat Love -->
+  <section class="section-cream section-pad">
+    <div class="container">
+      <div class="anim" style="text-align:center;margin-bottom:48px">
+        <h2 class="heading-display" style="font-size:clamp(28px,5vw,40px)" data-en="Why Meat Love" data-kr="왜 고기사랑인가">Why Meat Love</h2>
+      </div>
+      <div class="feature-grid stagger">
+        <div class="feature-card anim">
+          <div class="emoji">🥩</div>
+          <h3 data-en="Prime Quality Meats" data-kr="프라임 품질 고기">Prime Quality Meats</h3>
+          <p data-en="USDA Prime brisket, bulgogi &amp; pork belly at All-You-Can-Eat prices you won't believe." data-kr="USDA 프라임 차돌박이, 불고기, 삼겹살을 무한리필 가격으로 즐기세요.">USDA Prime brisket, bulgogi &amp; pork belly at All-You-Can-Eat prices you won't believe.</p>
+        </div>
+        <div class="feature-card anim">
+          <div class="emoji">💰</div>
+          <h3 data-en="AYCE from $26.99" data-kr="무한리필 $26.99부터">AYCE from $26.99</h3>
+          <p data-en="Two menu tiers. A 2-hour feast. Unlimited banchan refills. Bring your appetite." data-kr="두 가지 코스. 2시간 만찬. 무한 반찬 리필. 배고프게 오세요.">Two menu tiers. A 2-hour feast. Unlimited banchan refills. Bring your appetite.</p>
+        </div>
+        <div class="feature-card anim">
+          <div class="emoji">⭐</div>
+          <h3 data-en="800+ 5-Star Reviews" data-kr="800개 이상의 5성 리뷰">800+ 5-Star Reviews</h3>
+          <p data-en="Rated 4.3 on Google with 98% recommendation rate on Facebook. LA's favorite." data-kr="구글 4.3점, 페이스북 98% 추천율. LA가 사랑하는 맛집.">Rated 4.3 on Google with 98% recommendation rate on Facebook. LA's favorite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Dishes -->
+  <section class="section-dark section-pad">
+    <div class="container">
+      <div class="anim" style="text-align:center;margin-bottom:48px">
+        <div style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:600" data-en="From Our Grill" data-kr="우리의 그릴에서">From Our Grill</div>
+        <h2 class="heading-display" style="font-size:clamp(28px,5vw,40px)" data-en="Signature Dishes" data-kr="시그니처 메뉴">Signature Dishes</h2>
+      </div>
+      <div class="dish-grid stagger">
+        <div class="dish-card anim" style="position:relative">
+          <div class="dish-card-img" style="background:linear-gradient(135deg,rgba(230,57,38,0.08),rgba(212,168,83,0.05))">🥩</div>
+          <div class="dish-card-body"><h3 data-en="Prime Beef Bulgogi" data-kr="프라임 소불고기">Prime Beef Bulgogi</h3><div class="sub" data-en="프라임 소불고기" data-kr="Prime Beef Bulgogi">프라임 소불고기</div><p data-en="Tender, perfectly marinated prime beef" data-kr="부드럽고 완벽하게 양념된 프라임 소고기">Tender, perfectly marinated prime beef</p></div>
+        </div>
+        <div class="dish-card anim" style="position:relative">
+          <div class="dish-card-img" style="background:linear-gradient(135deg,rgba(230,57,38,0.10),rgba(212,168,83,0.06))">🔥</div>
+          <div class="dish-card-body"><h3 data-en="Smoky Beef Belly" data-kr="훈제 차돌박이">Smoky Beef Belly</h3><div class="sub" data-en="훈제 차돌박이" data-kr="Smoky Beef Belly">훈제 차돌박이</div><p data-en="Rich, smoky, melt-in-your-mouth" data-kr="풍미 가득, 입에서 살살 녹는">Rich, smoky, melt-in-your-mouth</p></div>
+        </div>
+        <div class="dish-card anim" style="position:relative">
+          <div class="dish-card-img" style="background:linear-gradient(135deg,rgba(230,57,38,0.12),rgba(212,168,83,0.07))">🧄</div>
+          <div class="dish-card-body"><h3 data-en="Garlic Pork Belly" data-kr="마늘 삼겹살">Garlic Pork Belly</h3><div class="sub" data-en="마늘 삼겹살" data-kr="Garlic Pork Belly">마늘 삼겹살</div><p data-en="Crispy garlic-infused pork belly" data-kr="바삭한 마늘향 삼겹살">Crispy garlic-infused pork belly</p></div>
+        </div>
+        <div class="dish-card anim" style="position:relative">
+          <div class="dish-card-img" style="background:linear-gradient(135deg,rgba(230,57,38,0.14),rgba(212,168,83,0.08))">🍖</div>
+          <div class="dish-card-body"><h3 data-en="Marinated Beef Rib" data-kr="양념 갈비">Marinated Beef Rib</h3><div class="sub" data-en="양념 갈비" data-kr="Marinated Beef Rib">양념 갈비</div><p data-en="Sweet &amp; savory galbi perfection" data-kr="달콤하고 짭짤한 갈비의 완성">Sweet &amp; savory galbi perfection</p></div>
+        </div>
+        <div class="dish-card anim" style="position:relative">
+          <span class="fan-fav-badge" data-en="Fan Favorite" data-kr="인기 메뉴">Fan Favorite</span>
+          <div class="dish-card-img" style="background:linear-gradient(135deg,rgba(230,57,38,0.16),rgba(212,168,83,0.09))">🍱</div>
+          <div class="dish-card-body"><h3 data-en="Kimchi Rice Lunchbox" data-kr="김치볶음밥 도시락">Kimchi Rice Lunchbox</h3><div class="sub" data-en="김치볶음밥 도시락" data-kr="Kimchi Rice Lunchbox">김치볶음밥 도시락</div><p data-en="Our legendary fan-favorite" data-kr="전설적인 인기 메뉴">Our legendary fan-favorite</p></div>
+        </div>
+        <div class="dish-card anim" style="position:relative">
+          <div class="dish-card-img" style="background:linear-gradient(135deg,rgba(230,57,38,0.18),rgba(212,168,83,0.10))">👅</div>
+          <div class="dish-card-body"><h3 data-en="Beef Tongue" data-kr="우설">Beef Tongue</h3><div class="sub" data-en="우설" data-kr="Beef Tongue">우설</div><p data-en="Delicate, tender, unforgettable" data-kr="섬세하고 부드러운 잊지 못할 맛">Delicate, tender, unforgettable</p></div>
+        </div>
+      </div>
+      <div class="anim" style="text-align:center;margin-top:36px">
+        <span onclick="navigate('menu')" style="color:var(--gold);cursor:pointer;font-size:15px;font-weight:600;letter-spacing:0.5px" data-en="See Full Menu →" data-kr="전체 메뉴 보기 →">See Full Menu →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section-cream section-pad">
+    <div class="container">
+      <div class="anim" style="text-align:center;margin-bottom:48px">
+        <h2 class="heading-display" style="font-size:clamp(28px,5vw,40px)" data-en="What Our Guests Say" data-kr="고객 리뷰">What Our Guests Say</h2>
+      </div>
+      <div class="review-grid stagger">
+        <div class="review-card anim">
+          <div>
+            <div class="review-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <blockquote data-en="&ldquo;Best value KBBQ in all of Koreatown. Prime brisket at this price is unbeatable.&rdquo;" data-kr="&ldquo;코리아타운 최고의 가성비 KBBQ. 이 가격에 프라임 차돌박이는 정말 대단합니다.&rdquo;">&ldquo;Best value KBBQ in all of Koreatown. Prime brisket at this price is unbeatable.&rdquo;</blockquote>
+          </div>
+          <div class="review-attr" data-en="— Verified Guest" data-kr="— 인증된 고객">— Verified Guest</div>
+        </div>
+        <div class="review-card anim">
+          <div>
+            <div class="review-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <blockquote data-en="&ldquo;The Kimchi Rice Lunchbox is a must. You literally can't get this anywhere else.&rdquo;" data-kr="&ldquo;김치볶음밥 도시락은 필수입니다. 다른 곳에서는 절대 못 먹어요.&rdquo;">&ldquo;The Kimchi Rice Lunchbox is a must. You literally can't get this anywhere else.&rdquo;</blockquote>
+          </div>
+          <div class="review-attr" data-en="— Verified Guest" data-kr="— 인증된 고객">— Verified Guest</div>
+        </div>
+        <div class="review-card anim">
+          <div>
+            <div class="review-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <blockquote data-en="&ldquo;Consistent every time. Great meat, great sides, great price. We keep coming back.&rdquo;" data-kr="&ldquo;언제나 변함없는 맛. 좋은 고기, 좋은 반찬, 좋은 가격. 계속 오게 됩니다.&rdquo;">&ldquo;Consistent every time. Great meat, great sides, great price. We keep coming back.&rdquo;</blockquote>
+          </div>
+          <div class="review-attr" data-en="— Verified Guest" data-kr="— 인증된 고객">— Verified Guest</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location CTA -->
+  <section class="section-dark" style="padding:64px 0">
+    <div class="container anim" style="text-align:center">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <h2 class="heading-display" style="font-size:clamp(24px,4vw,36px);margin:12px 0" data-en="Find Us in the Heart of Koreatown" data-kr="코리아타운 중심부에서 만나요">Find Us in the Heart of Koreatown</h2>
+      <p style="opacity:0.6;margin-bottom:8px">1145 S Western Ave, Los Angeles, CA 90006</p>
+      <p style="opacity:0.4;font-size:13px;margin-bottom:28px" data-en="$3 Valet · Street Parking · Outdoor Seating" data-kr="$3 발렛 · 노상 주차 · 야외 좌석">$3 Valet · Street Parking · Outdoor Seating</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="tel:3233730700" class="cta-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-en="Call to Reserve" data-kr="예약 전화하기">Call to Reserve</span>
+        </a>
+        <a href="https://maps.google.com/?q=1145+S+Western+Ave+Los+Angeles+CA+90006" target="_blank" rel="noopener noreferrer" class="cta-btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-en="Get Directions" data-kr="길찾기">Get Directions</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ========================================================================== -->
+<!-- MENU PAGE -->
+<!-- ========================================================================== -->
+<div class="page" id="page-menu">
+
+  <section class="section-dark page-banner">
+    <div class="container">
+      <div class="page-banner-label hero-anim" data-en="All-You-Can-Eat" data-kr="무한리필">All-You-Can-Eat</div>
+      <h1 class="heading-display hero-delay1" data-en="Our Menu" data-kr="메뉴">Our Menu</h1>
+      <p class="hero-delay2" data-en="All-You-Can-Eat Korean BBQ — Two Tiers, Unlimited Flavor" data-kr="무한리필 코리안 BBQ — 두 가지 코스, 무한한 맛">All-You-Can-Eat Korean BBQ — Two Tiers, Unlimited Flavor</p>
+    </div>
+  </section>
+
+  <section class="section-cream section-pad">
+    <div class="container">
+
+      <!-- Tier Toggle -->
+      <div class="anim tier-toggle">
+        <button class="tier-btn active-premium" id="btn-premium" onclick="switchTier('premium')"><span data-en="Premium — $31.99/person" data-kr="프리미엄 — $31.99/1인">Premium — $31.99/person</span></button>
+        <button class="tier-btn" id="btn-classic" onclick="switchTier('classic')"><span data-en="Classic — $26.99/person" data-kr="클래식 — $26.99/1인">Classic — $26.99/person</span></button>
+      </div>
+
+      <!-- Premium Tier -->
+      <div class="anim tier-card premium-border" id="tier-premium">
+        <div class="tier-header">
+          <h2><span data-en="Premium" data-kr="프리미엄">Premium</span> <span class="tier-price gold">$31.99</span> <span class="tier-per" data-en="/person" data-kr="/1인">/person</span></h2>
+          <span class="best-value-badge" data-en="BEST VALUE" data-kr="최고의 가성비">BEST VALUE</span>
+        </div>
+        <div class="menu-items-grid" id="premium-items"></div>
+      </div>
+
+      <!-- Classic Tier -->
+      <div class="anim tier-card classic-border" id="tier-classic" style="display:none">
+        <div class="tier-header">
+          <h2><span data-en="Classic" data-kr="클래식">Classic</span> <span class="tier-price red">$26.99</span> <span class="tier-per" data-en="/person" data-kr="/1인">/person</span></h2>
+        </div>
+        <div class="menu-items-grid" id="classic-items"></div>
+      </div>
+
+      <!-- Included -->
+      <h2 class="heading-display anim" style="font-size:28px;margin-bottom:24px;text-align:center" data-en="Included With All AYCE" data-kr="기본 포함 메뉴">Included With All AYCE</h2>
+      <div class="included-grid anim">
+        <div class="included-group">
+          <h3 data-en="Appetizers" data-kr="에피타이저">Appetizers</h3>
+          <div class="included-item"><span data-en="Corn Cheese" data-kr="콘치즈">Corn Cheese</span><span class="alt" data-en="콘치즈" data-kr="Corn Cheese">콘치즈</span></div>
+          <div class="included-item"><span data-en="Fried Dumpling" data-kr="군만두">Fried Dumpling</span><span class="alt" data-en="군만두" data-kr="Fried Dumpling">군만두</span></div>
+          <div class="included-item"><span data-en="Fried Chicken w/ Spicy Sauce" data-kr="양념 치킨">Fried Chicken w/ Spicy Sauce</span><span class="alt" data-en="양념 치킨" data-kr="Fried Chicken w/ Spicy Sauce">양념 치킨</span></div>
+          <div class="included-item"><span data-en="Sweet Potato" data-kr="고구마">Sweet Potato</span><span class="alt" data-en="고구마" data-kr="Sweet Potato">고구마</span></div>
+        </div>
+        <div class="included-group">
+          <h3 data-en="Salads" data-kr="샐러드">Salads</h3>
+          <div class="included-item"><span data-en="Lettuce Salad" data-kr="상추 샐러드">Lettuce Salad</span><span class="alt" data-en="상추 샐러드" data-kr="Lettuce Salad">상추 샐러드</span></div>
+          <div class="included-item"><span data-en="Onion Salad w/ Ponzu" data-kr="양파 샐러드">Onion Salad w/ Ponzu</span><span class="alt" data-en="양파 샐러드" data-kr="Onion Salad w/ Ponzu">양파 샐러드</span></div>
+          <div class="included-item"><span data-en="Chicken Salad w/ Spicy Sauce" data-kr="치킨 샐러드">Chicken Salad w/ Spicy Sauce</span><span class="alt" data-en="치킨 샐러드" data-kr="Chicken Salad w/ Spicy Sauce">치킨 샐러드</span></div>
+        </div>
+        <div class="included-group">
+          <h3 data-en="Rice & Hot Soup" data-kr="밥 & 국물">Rice &amp; Hot Soup</h3>
+          <div class="included-item"><span data-en="Steamed Egg Soup" data-kr="계란찜">Steamed Egg Soup</span><span class="alt" data-en="계란찜" data-kr="Steamed Egg Soup">계란찜</span></div>
+          <div class="included-item"><span data-en="Spicy Beef Soup" data-kr="육개장">Spicy Beef Soup</span><span class="alt" data-en="육개장" data-kr="Spicy Beef Soup">육개장</span></div>
+          <div class="included-item"><span data-en="Soy Bean Soup" data-kr="된장찌개">Soy Bean Soup</span><span class="alt" data-en="된장찌개" data-kr="Soy Bean Soup">된장찌개</span></div>
+          <div class="included-item"><span data-en="Kimchi Rice Lunchbox" data-kr="김치볶음밥 도시락">Kimchi Rice Lunchbox</span><span class="alt" data-en="김치볶음밥 도시락" data-kr="Kimchi Rice Lunchbox">김치볶음밥 도시락</span></div>
+        </div>
+      </div>
+
+      <!-- Banchan & Drinks -->
+      <div class="info-grid anim">
+        <div class="info-box">
+          <h3 data-en="Banchan & Sides" data-kr="반찬">Banchan &amp; Sides</h3>
+          <p data-en="Unlimited refills — Bean Sprouts, Kimchi, Radish, Japchae, Macaroni Salad, Fish Cakes & more" data-kr="무한 리필 — 콩나물, 김치, 무, 잡채, 마카로니 샐러드, 어묵 외 다수">Unlimited refills — Bean Sprouts, Kimchi, Radish, Japchae, Macaroni Salad, Fish Cakes &amp; more</p>
+        </div>
+        <div class="info-box">
+          <h3 data-en="Soju & Beer" data-kr="소주 & 맥주">Soju &amp; Beer</h3>
+          <p data-en="Full bar available — Soju (various flavors), Beer (domestic & imported), Sake, Wine, Soft Drinks, Turkish Coffee" data-kr="풀바 운영 — 소주 (다양한 맛), 맥주 (국내 & 수입), 사케, 와인, 음료, 터키시 커피">Full bar available — Soju (various flavors), Beer (domestic &amp; imported), Sake, Wine, Soft Drinks, Turkish Coffee</p>
+        </div>
+      </div>
+
+      <!-- Dining Notes -->
+      <div class="note-box anim">
+        <h3 data-en="Dining Notes" data-kr="이용 안내">Dining Notes</h3>
+        <div class="notes-grid">
+          <div class="note-item"><span class="check">✓</span> <span data-en="2-hour time limit per party" data-kr="파티당 2시간 제한">2-hour time limit per party</span></div>
+          <div class="note-item"><span class="check">✓</span> <span data-en="All food must be consumed on-site" data-kr="매장 내 식사만 가능">All food must be consumed on-site</span></div>
+          <div class="note-item"><span class="check">✓</span> <span data-en="Maximum 3 credit cards per party" data-kr="파티당 최대 3개 카드">Maximum 3 credit cards per party</span></div>
+          <div class="note-item"><span class="check">✓</span> <span data-en="Maximum 3 split checks per party" data-kr="파티당 최대 3개 분할 결제">Maximum 3 split checks per party</span></div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="anim" style="text-align:center">
+        <h2 class="heading-display" style="font-size:32px;margin-bottom:20px" data-en="Ready to Feast?" data-kr="준비되셨나요?">Ready to Feast?</h2>
+        <a href="tel:3233730700" class="cta-btn" style="font-size:16px;padding:16px 32px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-en="Call to Reserve" data-kr="예약 전화하기">Call to Reserve</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+
+<!-- ========================================================================== -->
+<!-- ABOUT PAGE -->
+<!-- ========================================================================== -->
+<div class="page" id="page-about">
+
+  <section class="section-dark page-banner">
+    <div class="container">
+      <div class="page-banner-label hero-anim" data-en="Since 2017" data-kr="2017년부터">Since 2017</div>
+      <h1 class="heading-display hero-delay1" data-en="Our Story" data-kr="우리의 이야기">Our Story</h1>
+    </div>
+  </section>
+
+  <section class="section-cream section-pad">
+    <div class="container">
+      <div class="about-text anim">
+        <p data-en="Since 2017, Meat Love Korean BBQ has been serving Koreatown the best-value All-You-Can-Eat Korean BBQ experience in Los Angeles. What started as a simple mission — serve prime-quality meats at honest prices — has grown into one of LA's most beloved KBBQ destinations, with over 800 five-star reviews and a loyal following that keeps coming back for more." data-kr="2017년부터 고기사랑 Korean BBQ는 코리아타운에서 최고의 가성비 무한리필 코리안 BBQ를 제공해 왔습니다. 정직한 가격에 프라임 품질의 고기를 제공하겠다는 단순한 사명에서 시작하여, LA에서 가장 사랑받는 KBBQ 맛집으로 성장했습니다.">Since 2017, Meat Love Korean BBQ has been serving Koreatown the best-value All-You-Can-Eat Korean BBQ experience in Los Angeles. What started as a simple mission — serve prime-quality meats at honest prices — has grown into one of LA's most beloved KBBQ destinations, with over 800 five-star reviews and a loyal following that keeps coming back for more.</p>
+        <p data-en="We believe Korean BBQ is more than a meal. It's the sizzle of marbled brisket hitting the grill, the clinking of soju glasses, the laughter of friends reaching across the table for one more piece of perfectly marinated galbi. That's what Meat Love is all about." data-kr="우리는 코리안 BBQ가 단순한 식사 이상이라고 믿습니다. 마블링이 좋은 차돌박이가 불판 위에서 지글거리는 소리, 소주잔이 부딪히는 소리, 완벽하게 양념된 갈비를 하나 더 집으려는 친구들의 웃음소리. 그것이 바로 고기사랑입니다.">We believe Korean BBQ is more than a meal. It's the sizzle of marbled brisket hitting the grill, the clinking of soju glasses, the laughter of friends reaching across the table for one more piece of perfectly marinated galbi. That's what Meat Love is all about.</p>
+      </div>
+      <div class="divider anim"><div class="divider-line"></div><span style="font-size:24px">🔥</span><div class="divider-line"></div></div>
+
+      <div class="feature-grid stagger" style="margin-bottom:48px">
+        <div class="feature-card anim">
+          <div class="emoji">🥩</div>
+          <h3 data-en="Prime Cuts, Honest Prices" data-kr="프라임 품질, 정직한 가격">Prime Cuts, Honest Prices</h3>
+          <p data-en="We serve USDA Prime brisket and bulgogi at AYCE prices that won't break the bank. Quality you can taste in every bite." data-kr="USDA 프라임 차돌박이와 불고기를 부담 없는 무한리필 가격으로 즐기세요.">We serve USDA Prime brisket and bulgogi at AYCE prices that won't break the bank. Quality you can taste in every bite.</p>
+        </div>
+        <div class="feature-card anim">
+          <div class="emoji">🍱</div>
+          <h3 data-en="The Full Experience" data-kr="완벽한 경험">The Full Experience</h3>
+          <p data-en="Unlimited banchan, steamed egg soup, our legendary Kimchi Rice Lunchbox, and a full bar with soju, beer, and more." data-kr="무한 반찬, 계란찜, 전설의 김치볶음밥 도시락, 그리고 소주, 맥주 등 풀바까지.">Unlimited banchan, steamed egg soup, our legendary Kimchi Rice Lunchbox, and a full bar with soju, beer, and more.</p>
+        </div>
+        <div class="feature-card anim">
+          <div class="emoji">🎉</div>
+          <h3 data-en="Built for Good Times" data-kr="즐거운 시간을 위해">Built for Good Times</h3>
+          <p data-en="Spacious interior, outdoor patio, TVs for game day, and smoke-free dining with our ventilation system. Bring your crew." data-kr="넓은 실내, 야외 테라스, 스포츠 TV, 최첨단 환기 시스템으로 쾌적한 식사. 친구들과 함께 오세요.">Spacious interior, outdoor patio, TVs for game day, and smoke-free dining with our ventilation system. Bring your crew.</p>
+        </div>
+      </div>
+
+      <div class="parking-card anim">
+        <h3 data-en="Parking & Extras" data-kr="주차 & 편의시설">Parking &amp; Extras</h3>
+        <div class="parking-grid">
+          <div class="parking-item"><span class="check">✓</span> <span data-en="$3 valet parking available" data-kr="$3 발렛 파킹 가능">$3 valet parking available</span></div>
+          <div class="parking-item"><span class="check">✓</span> <span data-en="Street parking available nearby" data-kr="근처 노상 주차 가능">Street parking available nearby</span></div>
+          <div class="parking-item"><span class="check">✓</span> <span data-en="Outdoor seating (dog-friendly!)" data-kr="야외 좌석 (반려견 동반 가능!)">Outdoor seating (dog-friendly!)</span></div>
+          <div class="parking-item"><span class="check">✓</span> <span data-en="Private dining for groups" data-kr="단체 프라이빗 다이닝">Private dining for groups</span></div>
+          <div class="parking-item"><span class="check">✓</span> <span data-en="Reservations recommended on weekends" data-kr="주말 예약 권장">Reservations recommended on weekends</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark cta-band">
+    <div class="container anim">
+      <h2 class="heading-display" style="font-size:32px" data-en="Ready to Feast?" data-kr="준비되셨나요?">Ready to Feast?</h2>
+      <a href="tel:3233730700" class="cta-btn" style="font-size:16px;padding:16px 32px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-en="Call to Reserve" data-kr="예약 전화하기">Call to Reserve</span>
+      </a>
+    </div>
+  </section>
+</div>
+
+
+<!-- ========================================================================== -->
+<!-- CONTACT PAGE -->
+<!-- ========================================================================== -->
+<div class="page" id="page-contact">
+
+  <section class="section-dark page-banner">
+    <div class="container">
+      <div class="page-banner-label hero-anim" data-en="Koreatown, Los Angeles" data-kr="코리아타운, 로스앤젤레스">Koreatown, Los Angeles</div>
+      <h1 class="heading-display hero-delay1" data-en="Visit Us" data-kr="방문하기">Visit Us</h1>
+      <div class="hero-delay2" style="margin-top:20px">
+        <a href="tel:3233730700" class="cta-btn pulse" style="font-size:18px;padding:18px 36px">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-en="Call to Reserve" data-kr="예약 전화하기">Call to Reserve</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-cream section-pad">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left column -->
+        <div class="anim">
+          <h2 class="heading-display" style="font-size:28px;margin-bottom:32px" data-en="Get In Touch" data-kr="연락하기">Get In Touch</h2>
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="contact-label" data-en="Phone" data-kr="전화">Phone</div><a href="tel:3233730700" style="font-size:18px;font-weight:700">(323) 373-0700</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="contact-label" data-en="Email" data-kr="이메일">Email</div><span style="font-size:16px">meatlovebbq@gmail.com</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="contact-label" data-en="Address" data-kr="주소">Address</div><span style="font-size:16px">1145 S Western Ave<br>Los Angeles, CA 90006</span></div>
+          </div>
+
+          <div class="contact-park">
+            <div class="contact-park-label" data-en="Parking" data-kr="주차">Parking</div>
+            <p style="font-size:14px;opacity:0.7" data-en="$3 valet parking · Street parking nearby" data-kr="$3 발렛 파킹 · 근처 노상 주차 가능">$3 valet parking · Street parking nearby</p>
+          </div>
+
+          <div>
+            <div class="contact-label" style="margin-bottom:12px" data-en="Follow Us" data-kr="팔로우하기">Follow Us</div>
+            <div class="social-btns">
+              <a href="https://www.instagram.com/meatlovebbq/" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
+              <a href="https://www.facebook.com/meatlovebbq/" target="_blank" rel="noopener noreferrer" class="social-btn">Facebook</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: Hours -->
+        <div class="anim" style="transition-delay:0.15s">
+          <h2 class="heading-display" style="font-size:28px;margin-bottom:32px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:8px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span data-en="Hours of Operation" data-kr="영업시간">Hours of Operation</span>
+          </h2>
+          <div class="hours-card">
+            <div class="hours-row"><span class="hours-day" data-en="Monday" data-kr="월요일">Monday</span><span class="hours-time">5:00 PM – 11:30 PM</span></div>
+            <div class="hours-row"><span class="hours-day" data-en="Tuesday" data-kr="화요일">Tuesday</span><span class="hours-time">5:00 PM – 11:30 PM</span></div>
+            <div class="hours-row"><span class="hours-day" data-en="Wednesday" data-kr="수요일">Wednesday</span><span class="hours-time">5:00 PM – 11:30 PM</span></div>
+            <div class="hours-row"><span class="hours-day" data-en="Thursday" data-kr="목요일">Thursday</span><span class="hours-time">5:00 PM – 11:30 PM</span></div>
+            <div class="hours-row"><span class="hours-day" data-en="Friday" data-kr="금요일">Friday</span><div><span class="hours-time">5:00 PM – 12:30 AM</span></div></div>
+            <div class="hours-row"><span class="hours-day" data-en="Saturday" data-kr="토요일">Saturday</span><div><span class="hours-time">12:00 PM – 12:30 AM</span><div class="hours-note" data-en="★ Lunch Available" data-kr="★ 점심 가능">★ Lunch Available</div></div></div>
+            <div class="hours-row"><span class="hours-day" data-en="Sunday" data-kr="일요일">Sunday</span><div><span class="hours-time">12:00 PM – 11:30 PM</span><div class="hours-note" data-en="★ Lunch Available" data-kr="★ 점심 가능">★ Lunch Available</div></div></div>
+          </div>
+          <div class="weekend-banner" data-en="☀️ Weekend lunch starts at noon!" data-kr="☀️ 주말 점심은 정오부터!">☀️ Weekend lunch starts at noon!</div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-frame anim">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7!2d-118.3093!3d34.0465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b85a6dc0a80d%3A0xaef8e3a2de0d3b2!2sMeat%20Love%20Korean%20BBQ!5e0!3m2!1sen!2sus!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Meat Love Korean BBQ Location"></iframe>
+      </div>
+      <div class="anim" style="text-align:center;margin-top:32px">
+        <a href="https://maps.google.com/?q=Meat+Love+Korean+BBQ+1145+S+Western+Ave+Los+Angeles+CA+90006" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-en="Get Directions" data-kr="길찾기">Get Directions</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ========================================================================== -->
+<!-- FOOTER (all pages) -->
+<!-- ========================================================================== -->
+<footer class="section-dark footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+          <span style="font-size:20px">🔥</span>
+          <span style="font-family:'Playfair Display',serif;font-weight:900;font-size:16px">MEAT LOVE</span>
+        </div>
+        <p data-en="Koreatown's Best Value All-You-Can-Eat Korean BBQ since 2017." data-kr="2017년부터 코리아타운 최고의 가성비 무한리필 코리안 BBQ.">Koreatown's Best Value All-You-Can-Eat Korean BBQ since 2017.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title" data-en="Hours" data-kr="영업시간">Hours</div>
+        <p><span data-en="Mon–Thu" data-kr="월–목">Mon–Thu</span>: 5:00 PM – 11:30 PM</p>
+        <p><span data-en="Fri" data-kr="금">Fri</span>: 5:00 PM – 12:30 AM</p>
+        <p><span data-en="Sat" data-kr="토">Sat</span>: 12:00 PM – 12:30 AM</p>
+        <p><span data-en="Sun" data-kr="일">Sun</span>: 12:00 PM – 11:30 PM</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title" data-en="Contact" data-kr="연락처">Contact</div>
+        <p>(323) 373-0700</p>
+        <p>meatlovebbq@gmail.com</p>
+        <p>1145 S Western Ave</p>
+        <p>Los Angeles, CA 90006</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy" data-en="© 2025 Meat Love Korean BBQ. All Rights Reserved." data-kr="© 2025 고기사랑 Korean BBQ. All Rights Reserved.">© 2025 Meat Love Korean BBQ. All Rights Reserved.</div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/meatlovebbq/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/meatlovebbq/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.yelp.com/biz/meat-love-korean-bbq-los-angeles" target="_blank" rel="noopener noreferrer">Yelp</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// ============ DATA ============
+const premiumItems = [
+  ["Chadol / Brisket","차돌박이"],["Beef Short Rib","소갈비"],["Marinated Beef Rib","양념 소갈비"],
+  ["Seasoned Boneless Rib","양념 무뼈 갈비"],["Beef Tongue","우설"],["Prime Steak","프라임 스테이크"],
+  ["Spicy Pork Steak","매운 돼지 스테이크"],["Mushroom Stew","버섯전골"],["Prime Beef Bulgogi","프라임 소불고기"],
+  ["Smoky Beef Belly","훈제 차돌박이"],["Teraki Beef Hot Pepper","데리야끼 매운 소고기"],
+  ["Marinated Beef Hot Pepper","양념 매운 소고기"],["Marinated Pork","양념 돼지고기"],
+  ["Pork Steak","돼지 스테이크"],["Pork Belly","삼겹살"],["Garlic Pork Belly","마늘 삼겹살"],
+  ["Spicy Pork Steak","매운 돼지 스테이크"],["Chicken Bulgogi","닭불고기"],["Spicy Chicken","매운 닭고기"],
+  ["Beef Small Intestine","소곱창"],["Beef Large Intestine","소대창"],["Pork Rinds","돼지 껍데기"]
+];
+const classicItems = [
+  ["Prime Beef Bulgogi","프라임 소불고기"],["Smoky Beef Belly","훈제 차돌박이"],
+  ["Marinated Beef Hot Pepper","양념 매운 소고기"],["Marinated Pork Hot Pepper","양념 매운 돼지고기"],
+  ["Pork Steak","돼지 스테이크"],["Pork Belly","삼겹살"],["Garlic Pork Belly","마늘 삼겹살"],
+  ["Spicy Pork Steak","매운 돼지 스테이크"],["Chicken Bulgogi","닭불고기"],["Spicy Chicken","매운 닭고기"],
+  ["Beef Small Intestine","소곱창"],["Beef Large Intestine","소대창"],["Pork Rinds","돼지 껍데기"]
+];
+
+let currentLang = 'en';
+let currentPage = 'home';
+
+// ============ POPULATE MENU ITEMS ============
+function renderMenuItems(containerId, items) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = items.map(([en, kr]) =>
+    `<div class="menu-item"><span data-en="${en}" data-kr="${kr}">${currentLang === 'en' ? en : kr}</span><span class="alt" data-en="${kr}" data-kr="${en}">${currentLang === 'en' ? kr : en}</span></div>`
+  ).join('');
+}
+
+// ============ NAVIGATION ============
+function navigate(page) {
+  currentPage = page;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.querySelectorAll('.navbar .nav-link, #mobileOverlay .nav-link').forEach(l => {
+    l.classList.remove('active');
+    if (l.getAttribute('data-page') === page) l.classList.add('active');
+  });
+  closeMobile();
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  // Re-trigger animations
+  setTimeout(() => observeAnimations(), 100);
+}
+
+// ============ MOBILE MENU ============
+function openMobile() { document.getElementById('mobileOverlay').classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeMobile() { document.getElementById('mobileOverlay').classList.remove('open'); document.body.style.overflow = ''; }
+
+// ============ LANGUAGE TOGGLE ============
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', (lang === 'en' && b.textContent === 'EN') || (lang === 'kr' && b.textContent === '한국어'));
+  });
+  document.querySelectorAll('[data-en][data-kr]').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+  // Re-render menu items
+  renderMenuItems('premium-items', premiumItems);
+  renderMenuItems('classic-items', classicItems);
+}
+
+// ============ MENU TIER TOGGLE ============
+function switchTier(tier) {
+  const btnP = document.getElementById('btn-premium');
+  const btnC = document.getElementById('btn-classic');
+  const tierP = document.getElementById('tier-premium');
+  const tierC = document.getElementById('tier-classic');
+  if (tier === 'premium') {
+    btnP.className = 'tier-btn active-premium';
+    btnC.className = 'tier-btn';
+    tierP.style.display = 'block';
+    tierC.style.display = 'none';
+  } else {
+    btnP.className = 'tier-btn';
+    btnC.className = 'tier-btn active-classic';
+    tierP.style.display = 'none';
+    tierC.style.display = 'block';
+  }
+}
+
+// ============ SCROLL EFFECTS ============
+function observeAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim').forEach(el => {
+    if (!el.classList.contains('visible')) observer.observe(el);
+  });
+}
+
+// Navbar scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ============ INIT ============
+document.addEventListener('DOMContentLoaded', () => {
+  renderMenuItems('premium-items', premiumItems);
+  renderMenuItems('classic-items', classicItems);
+  observeAnimations();
+});
+</script>
+
+</body>
+</html>
